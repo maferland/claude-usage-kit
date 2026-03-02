@@ -128,6 +128,51 @@ public enum SessionFileReader {
         )
     }
 
+    // MARK: - Per-file cost
+
+    private static var costCache: [String: (mtime: Date, info: FileCostInfo)] = [:]
+
+    /// Read token usage and estimated cost from a single JSONL session file.
+    /// Results are cached by file mtime.
+    public static func readCostInfo(at url: URL) -> FileCostInfo? {
+        let path = url.path
+        let mtime = (try? url.resourceValues(forKeys: [.contentModificationDateKey]))?.contentModificationDate
+        if let mtime, let cached = costCache[path], cached.mtime == mtime {
+            return cached.info
+        }
+
+        let pricingTable = PricingService.fetchPricing()
+        var modelBuckets: [String: TokenBucket] = [:]
+        var maxTokens = 0
+        var primaryModel: String?
+
+        JSONLReader.parseFile(url) { _, _, usage, model, _ in
+            modelBuckets[model, default: TokenBucket()].add(usage)
+        }
+
+        guard !modelBuckets.isEmpty else { return nil }
+
+        var totalTokens = 0
+        var totalCost = 0.0
+
+        for (model, bucket) in modelBuckets {
+            let pricing = PricingService.resolvePricing(for: model, from: pricingTable)
+            totalTokens += bucket.totalTokens
+            totalCost += bucket.cost(pricing: pricing)
+
+            if bucket.totalTokens > maxTokens {
+                maxTokens = bucket.totalTokens
+                primaryModel = model
+            }
+        }
+
+        let info = FileCostInfo(totalTokens: totalTokens, estimatedCost: totalCost, primaryModel: primaryModel)
+        if let mtime {
+            costCache[path] = (mtime, info)
+        }
+        return info
+    }
+
     /// Decode Claude's encoded project directory name back to a filesystem path.
     /// Claude encodes by replacing both "/" and "." with "-", making "--" for "/." (dot-prefixed dirs).
     /// We walk the filesystem to resolve ambiguous dashes.
