@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/master.swiftdeps"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.dia"
+  }
+}
