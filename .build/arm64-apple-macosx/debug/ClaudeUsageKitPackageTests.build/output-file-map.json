@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/master.swiftdeps"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.dia"
+  }
+}

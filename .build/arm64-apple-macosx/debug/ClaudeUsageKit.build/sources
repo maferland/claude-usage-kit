@@ -1,0 +1,9 @@
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift
+/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift

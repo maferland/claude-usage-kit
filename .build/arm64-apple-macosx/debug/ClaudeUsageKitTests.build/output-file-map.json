@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/master.swiftdeps"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.dia"
+  },
+  "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift": {
+    "dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.d",
+    "object": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o",
+    "swiftmodule": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swiftdeps",
+    "diagnostics": "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.dia"
+  }
+}
