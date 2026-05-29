@@ -20,20 +20,26 @@ public enum SessionReader {
             ))
         }
 
-        let pricingTable = PricingService.fetchPricing()
-        var buckets: [DayModelKey: TokenBucket] = [:]
-        let jsonlFiles = JSONLReader.findJSONLFiles(in: claudeDir)
+        let files = JSONLReader.findJSONLFiles(in: claudeDir)
+        return readUsage(from: files, pricing: PricingService.fetchPricing())
+    }
 
-        for fileURL in jsonlFiles {
+    // Resumed/forked Claude Code sessions replay prior turns into new JSONL files, so the same assistant message appears in multiple files. Dedup by message.id to match ccusage's count.
+    static func readUsage(from files: [URL], pricing: [String: ModelPricing]) -> CCUsageResponse {
+        var buckets: [DayModelKey: TokenBucket] = [:]
+        var seenIds = Set<String>()
+
+        for fileURL in files {
             autoreleasepool {
-                JSONLReader.parseFile(fileURL) { _, _, usage, model, dateStr in
+                JSONLReader.parseFile(fileURL) { _, msg, usage, model, dateStr in
+                    if let id = msg.id, !seenIds.insert(id).inserted { return }
                     let key = DayModelKey(date: dateStr, model: model)
                     buckets[key, default: TokenBucket()].add(usage)
                 }
             }
         }
 
-        return buildResponse(from: buckets, pricing: pricingTable)
+        return buildResponse(from: buckets, pricing: pricing)
     }
 
     static func buildResponse(
