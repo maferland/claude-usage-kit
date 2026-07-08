@@ -1,2 +1,5 @@
-/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift
-/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift
+/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/FileCostInfoTests.swift
+/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/JSONLReaderTests.swift
+/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/ModelsTests.swift
+/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift
+/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/SessionReaderTests.swift

@@ -10,6 +10,45 @@ public enum SessionReader {
         let model: String
     }
 
+    /// One usage-bearing assistant line, cached so unchanged files aren't re-parsed.
+    struct ParsedLine {
+        let id: String?
+        let date: String
+        let model: String
+        let usage: JSONLReader.Usage
+    }
+
+    // Cache keyed by file path + mtime. Guarded because Burn calls readUsage from
+    // detached tasks that can overlap when refreshes queue up.
+    private static var parseCache: [String: (mtime: Date, lines: [ParsedLine])] = [:]
+    private static let cacheLock = NSLock()
+
+    static func parsedLines(for url: URL) -> [ParsedLine] {
+        let path = url.path
+        let mtime = (try? FileManager.default.attributesOfItem(atPath: path))?[.modificationDate] as? Date
+
+        if let mtime {
+            cacheLock.lock()
+            let cached = parseCache[path]
+            cacheLock.unlock()
+            if let cached, cached.mtime == mtime { return cached.lines }
+        }
+
+        var lines: [ParsedLine] = []
+        autoreleasepool {
+            JSONLReader.parseFile(url) { _, msg, usage, model, dateStr in
+                lines.append(ParsedLine(id: msg.id, date: dateStr, model: model, usage: usage))
+            }
+        }
+
+        if let mtime {
+            cacheLock.lock()
+            parseCache[path] = (mtime, lines)
+            cacheLock.unlock()
+        }
+        return lines
+    }
+
     public static func readUsage() throws -> CCUsageResponse {
         let claudeDir = JSONLReader.projectsDirectory
 
@@ -30,12 +69,10 @@ public enum SessionReader {
         var seenIds = Set<String>()
 
         for fileURL in files {
-            autoreleasepool {
-                JSONLReader.parseFile(fileURL) { _, msg, usage, model, dateStr in
-                    if let id = msg.id, !seenIds.insert(id).inserted { return }
-                    let key = DayModelKey(date: dateStr, model: model)
-                    buckets[key, default: TokenBucket()].add(usage)
-                }
+            for line in parsedLines(for: fileURL) {
+                if let id = line.id, !seenIds.insert(id).inserted { continue }
+                let key = DayModelKey(date: line.date, model: line.model)
+                buckets[key, default: TokenBucket()].add(line.usage)
             }
         }
 

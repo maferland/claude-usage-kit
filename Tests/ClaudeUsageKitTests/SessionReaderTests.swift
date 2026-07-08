@@ -43,6 +43,23 @@ final class SessionReaderTests: XCTestCase {
         XCTAssertEqual(response.totals.outputTokens, 100)
     }
 
+    func testReReadsFileAfterModification() throws {
+        let timestamp = "2026-05-28T12:00:00.000Z"
+        let file = tempDir.appendingPathComponent("session.jsonl")
+
+        try makeAssistantLine(id: "m1", model: "claude-opus-4-7", input: 100, output: 50, timestamp: timestamp)
+            .write(to: file, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.modificationDate: Date(timeIntervalSince1970: 1_000)], ofItemAtPath: file.path)
+        let first = SessionReader.readUsage(from: [file], pricing: stubPricing)
+        XCTAssertEqual(first.totals.inputTokens, 100)
+
+        try makeAssistantLine(id: "m2", model: "claude-opus-4-7", input: 777, output: 50, timestamp: timestamp)
+            .write(to: file, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.modificationDate: Date(timeIntervalSince1970: 2_000)], ofItemAtPath: file.path)
+        let second = SessionReader.readUsage(from: [file], pricing: stubPricing)
+        XCTAssertEqual(second.totals.inputTokens, 777, "new mtime should invalidate the parse cache")
+    }
+
     private func makeAssistantLine(id: String?, model: String, input: Int, output: Int, timestamp: String) -> String {
         let idField = id.map { "\"id\":\"\($0)\"," } ?? ""
         return """
