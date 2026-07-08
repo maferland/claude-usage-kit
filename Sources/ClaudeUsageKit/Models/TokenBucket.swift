@@ -15,6 +15,13 @@ struct TokenBucket {
         cacheReadTokens += usage.cache_read_input_tokens ?? 0
     }
 
+    mutating func add(input: Int, output: Int, cacheCreation: Int, cacheRead: Int) {
+        inputTokens += input
+        outputTokens += output
+        cacheCreationTokens += cacheCreation
+        cacheReadTokens += cacheRead
+    }
+
     func cost(pricing: ModelPricing) -> Double {
         Double(inputTokens) * pricing.inputCostPerToken
             + Double(outputTokens) * pricing.outputCostPerToken
