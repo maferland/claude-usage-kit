@@ -11,42 +11,119 @@ public enum SessionReader {
     }
 
     /// One usage-bearing assistant line, cached so unchanged files aren't re-parsed.
-    struct ParsedLine {
+    struct ParsedLine: Codable {
         let id: String?
         let date: String
         let model: String
-        let usage: JSONLReader.Usage
+        let inputTokens: Int
+        let outputTokens: Int
+        let cacheCreationTokens: Int
+        let cacheReadTokens: Int
     }
 
-    // Cache keyed by file path + mtime. Guarded because Burn calls readUsage from
-    // detached tasks that can overlap when refreshes queue up.
-    private static var parseCache: [String: (mtime: Date, lines: [ParsedLine])] = [:]
+    struct CacheEntry: Codable {
+        let mtime: Date
+        let lines: [ParsedLine]
+    }
+
+    // Bump when the on-disk shape changes; a mismatch makes the whole file ignored.
+    private static let cacheFormatVersion = 1
+
+    private struct PersistedCache: Codable {
+        let version: Int
+        let entries: [String: CacheEntry]
+    }
+
+    // Keyed by file path + mtime, mirrored to disk so a fresh process reuses it
+    // instead of re-parsing all history. Lock-guarded for Burn's overlapping refreshes.
+    private static var parseCache: [String: CacheEntry] = [:]
+    private static var cacheLoaded = false
+    private static var cacheDirty = false
     private static let cacheLock = NSLock()
+    private static let persistQueue = DispatchQueue(label: "ClaudeUsageKit.parseCache.persist")
+
+    static var cacheFileURL: URL = {
+        let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        return caches.appendingPathComponent("ClaudeUsageKit/parse-cache.json")
+    }()
+
+    static func resetCacheForTesting(fileURL: URL) {
+        cacheLock.lock()
+        defer { cacheLock.unlock() }
+        parseCache = [:]
+        cacheLoaded = false
+        cacheDirty = false
+        cacheFileURL = fileURL
+    }
+
+    static func flushPersistForTesting() {
+        persistQueue.sync {}
+    }
+
+    // Caller must hold cacheLock.
+    private static func loadCacheIfNeeded() {
+        guard !cacheLoaded else { return }
+        cacheLoaded = true
+        guard let data = try? Data(contentsOf: cacheFileURL),
+              let decoded = try? JSONDecoder().decode(PersistedCache.self, from: data),
+              decoded.version == cacheFormatVersion else { return }
+        parseCache = decoded.entries
+    }
 
     static func parsedLines(for url: URL) -> [ParsedLine] {
         let path = url.path
         let mtime = (try? FileManager.default.attributesOfItem(atPath: path))?[.modificationDate] as? Date
 
-        if let mtime {
-            cacheLock.lock()
-            let cached = parseCache[path]
+        cacheLock.lock()
+        loadCacheIfNeeded()
+        if let mtime, let cached = parseCache[path], cached.mtime == mtime {
             cacheLock.unlock()
-            if let cached, cached.mtime == mtime { return cached.lines }
+            return cached.lines
         }
+        cacheLock.unlock()
 
         var lines: [ParsedLine] = []
         autoreleasepool {
             JSONLReader.parseFile(url) { _, msg, usage, model, dateStr in
-                lines.append(ParsedLine(id: msg.id, date: dateStr, model: model, usage: usage))
+                lines.append(ParsedLine(
+                    id: msg.id, date: dateStr, model: model,
+                    inputTokens: usage.input_tokens ?? 0,
+                    outputTokens: usage.output_tokens ?? 0,
+                    cacheCreationTokens: usage.cache_creation_input_tokens ?? 0,
+                    cacheReadTokens: usage.cache_read_input_tokens ?? 0
+                ))
             }
         }
 
         if let mtime {
             cacheLock.lock()
-            parseCache[path] = (mtime, lines)
+            parseCache[path] = CacheEntry(mtime: mtime, lines: lines)
+            cacheDirty = true
             cacheLock.unlock()
         }
         return lines
+    }
+
+    /// Drop entries for files no longer present, then write the cache to disk on a
+    /// background queue if anything changed (off the hot path).
+    private static func persistCache(currentPaths: Set<String>) {
+        cacheLock.lock()
+        let pruned = parseCache.filter { currentPaths.contains($0.key) }
+        if pruned.count != parseCache.count {
+            parseCache = pruned
+            cacheDirty = true
+        }
+        guard cacheDirty else { cacheLock.unlock(); return }
+        cacheDirty = false
+        let snapshot = PersistedCache(version: cacheFormatVersion, entries: parseCache)
+        cacheLock.unlock()
+
+        persistQueue.async {
+            guard let data = try? JSONEncoder().encode(snapshot) else { return }
+            try? FileManager.default.createDirectory(
+                at: cacheFileURL.deletingLastPathComponent(), withIntermediateDirectories: true)
+            try? data.write(to: cacheFileURL, options: .atomic)
+        }
     }
 
     public static func readUsage() throws -> CCUsageResponse {
@@ -72,10 +149,13 @@ public enum SessionReader {
             for line in parsedLines(for: fileURL) {
                 if let id = line.id, !seenIds.insert(id).inserted { continue }
                 let key = DayModelKey(date: line.date, model: line.model)
-                buckets[key, default: TokenBucket()].add(line.usage)
+                buckets[key, default: TokenBucket()].add(
+                    input: line.inputTokens, output: line.outputTokens,
+                    cacheCreation: line.cacheCreationTokens, cacheRead: line.cacheReadTokens)
             }
         }
 
+        persistCache(currentPaths: Set(files.map(\.path)))
         return buildResponse(from: buckets, pricing: pricing)
     }
 

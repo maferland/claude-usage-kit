@@ -8,6 +8,8 @@ final class SessionReaderTests: XCTestCase {
         tempDir = URL(fileURLWithPath: NSTemporaryDirectory())
             .appendingPathComponent("ClaudeUsageKitTests-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
+        // Isolate the shared parse cache from the real one and from other tests.
+        SessionReader.resetCacheForTesting(fileURL: tempDir.appendingPathComponent("parse-cache.json"))
     }
 
     override func tearDownWithError() throws {
@@ -58,6 +60,42 @@ final class SessionReaderTests: XCTestCase {
         try FileManager.default.setAttributes([.modificationDate: Date(timeIntervalSince1970: 2_000)], ofItemAtPath: file.path)
         let second = SessionReader.readUsage(from: [file], pricing: stubPricing)
         XCTAssertEqual(second.totals.inputTokens, 777, "new mtime should invalidate the parse cache")
+    }
+
+    func testPersistsCacheToDisk() throws {
+        let cacheFile = tempDir.appendingPathComponent("parse-cache.json")
+        let file = tempDir.appendingPathComponent("session.jsonl")
+        try makeAssistantLine(id: "m1", model: "claude-opus-4-7", input: 100, output: 50, timestamp: "2026-05-28T12:00:00.000Z")
+            .write(to: file, atomically: true, encoding: .utf8)
+
+        _ = SessionReader.readUsage(from: [file], pricing: stubPricing)
+        SessionReader.flushPersistForTesting()
+
+        XCTAssertTrue(FileManager.default.fileExists(atPath: cacheFile.path), "cache file should be written")
+        XCTAssertGreaterThan(try Data(contentsOf: cacheFile).count, 0)
+    }
+
+    // Simulate a process restart: wipe in-memory state, then a same-mtime file serves
+    // stale cached tokens, proving the disk cache was loaded rather than re-parsed.
+    func testReusesDiskCacheAcrossRestart() throws {
+        let cacheFile = tempDir.appendingPathComponent("parse-cache.json")
+        let file = tempDir.appendingPathComponent("session.jsonl")
+        let mtime = Date(timeIntervalSince1970: 5_000)
+
+        try makeAssistantLine(id: "m1", model: "claude-opus-4-7", input: 100, output: 50, timestamp: "2026-05-28T12:00:00.000Z")
+            .write(to: file, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.modificationDate: mtime], ofItemAtPath: file.path)
+        XCTAssertEqual(SessionReader.readUsage(from: [file], pricing: stubPricing).totals.inputTokens, 100)
+        SessionReader.flushPersistForTesting()
+
+        SessionReader.resetCacheForTesting(fileURL: cacheFile)
+
+        try makeAssistantLine(id: "m1", model: "claude-opus-4-7", input: 999, output: 50, timestamp: "2026-05-28T12:00:00.000Z")
+            .write(to: file, atomically: true, encoding: .utf8)
+        try FileManager.default.setAttributes([.modificationDate: mtime], ofItemAtPath: file.path)
+
+        let reloaded = SessionReader.readUsage(from: [file], pricing: stubPricing)
+        XCTAssertEqual(reloaded.totals.inputTokens, 100, "should serve the disk-cached value, not re-parse")
     }
 
     private func makeAssistantLine(id: String?, model: String, input: Int, output: Int, timestamp: String) -> String {
