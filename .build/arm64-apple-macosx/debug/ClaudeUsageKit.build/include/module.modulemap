@@ -1,3 +1,0 @@
-module ClaudeUsageKit {
-    header "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/include/ClaudeUsageKit-Swift.h"
-}
