@@ -1,8 +1,8 @@
 {
   "builtTestProducts" : [
     {
-      "binaryPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.xctest/Contents/MacOS/ClaudeUsageKitPackageTests",
-      "packagePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit",
+      "binaryPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.xctest/Contents/MacOS/ClaudeUsageKitPackageTests",
+      "packagePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit",
       "productName" : "ClaudeUsageKitPackageTests"
     }
   ],
@@ -23,67 +23,72 @@
   "swiftCommands" : {
     "C.ClaudeUsageKit-arm64-apple-macosx15.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources",
-      "importPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "fileList" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources",
+      "importPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/DailyUsage.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/FileCostInfo.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/ModelPricing.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/SessionUsage.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/TokenBucket.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingService.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources"
         }
       ],
       "isLibrary" : true,
       "moduleName" : "ClaudeUsageKit",
-      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule",
+      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule",
       "objects" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/FileCostInfo.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -92,7 +97,7 @@
         "-enable-batch-mode",
         "-serialize-diagnostics",
         "-index-store-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
         "-Onone",
         "-enable-testing",
         "-j14",
@@ -100,12 +105,12 @@
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
         "-parseable-output",
         "-parse-as-library",
         "-emit-objc-header",
         "-emit-objc-header-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/include/ClaudeUsageKit-Swift.h",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/include/ClaudeUsageKit-Swift.h",
         "-swift-version",
         "5",
         "-plugin-path",
@@ -138,93 +143,98 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "claudeusagekit"
+        "claude_usage_kit"
       ],
-      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/output-file-map.json",
+      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/FileCostInfo.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/DailyUsage.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/FileCostInfo.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/ModelPricing.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/SessionUsage.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/TokenBucket.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingService.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
       ],
-      "tempsPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build",
+      "tempsPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build",
       "wholeModuleOptimization" : false
     },
     "C.ClaudeUsageKitPackageTests-arm64-apple-macosx15.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources",
-      "importPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "fileList" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources",
+      "importPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources"
         }
       ],
       "isLibrary" : true,
       "moduleName" : "ClaudeUsageKitPackageTests",
-      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitPackageTests.swiftmodule",
+      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitPackageTests.swiftmodule",
       "objects" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -233,7 +243,7 @@
         "-enable-batch-mode",
         "-serialize-diagnostics",
         "-index-store-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
         "-Onone",
         "-enable-testing",
         "-Xfrontend",
@@ -243,12 +253,12 @@
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
         "-parseable-output",
         "-parse-as-library",
         "-emit-objc-header",
         "-emit-objc-header-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/include/ClaudeUsageKitPackageTests-Swift.h",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/include/ClaudeUsageKitPackageTests-Swift.h",
         "-plugin-path",
         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
         "-sdk",
@@ -279,58 +289,73 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "claudeusagekit"
+        "claude_usage_kit"
       ],
-      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/output-file-map.json",
+      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitPackageTests.swiftmodule"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitPackageTests.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
       ],
-      "tempsPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build",
+      "tempsPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build",
       "wholeModuleOptimization" : false
     },
     "C.ClaudeUsageKitTests-arm64-apple-macosx15.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
-      "fileList" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources",
-      "importPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "fileList" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources",
+      "importPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/FileCostInfoTests.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/JSONLReaderTests.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/ModelsTests.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/SessionReaderTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources"
         }
       ],
       "isLibrary" : true,
       "moduleName" : "ClaudeUsageKitTests",
-      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule",
+      "moduleOutputPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule",
       "objects" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/FileCostInfoTests.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/JSONLReaderTests.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/SessionReaderTests.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -339,7 +364,7 @@
         "-enable-batch-mode",
         "-serialize-diagnostics",
         "-index-store-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
         "-Onone",
         "-enable-testing",
         "-Xfrontend",
@@ -349,7 +374,7 @@
         "-DDEBUG",
         "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
         "-module-cache-path",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
         "-parseable-output",
         "-parse-as-library",
         "-swift-version",
@@ -384,29 +409,44 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "claudeusagekit"
+        "claude_usage_kit"
       ],
-      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/output-file-map.json",
+      "outputFileMapPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/FileCostInfoTests.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/JSONLReaderTests.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/SessionReaderTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules/ClaudeUsageKitTests.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift",
-        "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift"
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/FileCostInfoTests.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/JSONLReaderTests.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/ModelsTests.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift",
+        "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/SessionReaderTests.swift"
       ],
-      "tempsPath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build",
+      "tempsPath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build",
       "wholeModuleOptimization" : false
     }
   },
@@ -419,26 +459,27 @@
       "-module-name",
       "ClaudeUsageKit",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-c",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/DailyUsage.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/FileCostInfo.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/ModelPricing.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/SessionUsage.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/TokenBucket.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingService.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionReader.swift",
       "-I",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx14.0",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
       "-index-store-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
       "-Onone",
       "-enable-testing",
       "-j14",
@@ -446,12 +487,12 @@
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
       "-parseable-output",
       "-parse-as-library",
       "-emit-objc-header",
       "-emit-objc-header-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/include/ClaudeUsageKit-Swift.h",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/include/ClaudeUsageKit-Swift.h",
       "-swift-version",
       "5",
       "-plugin-path",
@@ -484,7 +525,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
@@ -493,18 +534,18 @@
       "-module-name",
       "ClaudeUsageKitPackageTests",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-c",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift",
       "-I",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx14.0",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
       "-index-store-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
       "-Onone",
       "-enable-testing",
       "-Xfrontend",
@@ -514,12 +555,12 @@
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
       "-parseable-output",
       "-parse-as-library",
       "-emit-objc-header",
       "-emit-objc-header-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/include/ClaudeUsageKitPackageTests-Swift.h",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/include/ClaudeUsageKitPackageTests-Swift.h",
       "-plugin-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
       "-sdk",
@@ -550,7 +591,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
@@ -559,19 +600,22 @@
       "-module-name",
       "ClaudeUsageKitTests",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-c",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/FileCostInfoTests.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/JSONLReaderTests.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/ModelsTests.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/SessionReaderTests.swift",
       "-I",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/Modules",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx14.0",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
       "-index-store-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/index/store",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/index/store",
       "-Onone",
       "-enable-testing",
       "-Xfrontend",
@@ -581,7 +625,7 @@
       "-DDEBUG",
       "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
       "-module-cache-path",
-      "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ModuleCache",
       "-parseable-output",
       "-parse-as-library",
       "-swift-version",
@@ -616,7 +660,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "claudeusagekit",
+      "claude_usage_kit",
       "-driver-use-frontend-path",
       "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ]
@@ -637,14 +681,14 @@
 
   },
   "testEntryPointCommands" : {
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift" : {
       "inputs" : [
 
       ],
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
         }
       ]
     }
@@ -655,7 +699,7 @@
     }
   },
   "writeCommands" : {
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -664,44 +708,48 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/DailyUsage.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/DailyUsage.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/ModelPricing.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/FileCostInfo.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/SessionUsage.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/ModelPricing.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Models/TokenBucket.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/SessionUsage.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Models/TokenBucket.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Pricing/PricingService.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingCache.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Pricing/PricingService.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/JSONLReader.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionFileReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Sources/ClaudeUsageKit/Reading/SessionReader.swift"
         }
       ],
-      "outputFilePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources"
+      "outputFilePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/sources"
     },
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -710,12 +758,12 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.derived/runner.swift"
         }
       ],
-      "outputFilePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources"
+      "outputFilePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/sources"
     },
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.product/Objects.LinkFileList" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.product/Objects.LinkFileList" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -724,56 +772,72 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/DailyUsage.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/FileCostInfo.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/JSONLReader.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/ModelPricing.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingCache.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/PricingService.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionFileReader.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionReader.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/SessionUsage.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKit.build/TokenBucket.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.build/runner.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/FileCostInfoTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/JSONLReaderTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/ModelsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/PricingServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/SessionReaderTests.swift.o"
         }
       ],
-      "outputFilePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.product/Objects.LinkFileList"
+      "outputFilePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitPackageTests.product/Objects.LinkFileList"
     },
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -782,16 +846,28 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/ModelsTests.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/FileCostInfoTests.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift"
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/JSONLReaderTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/ModelsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/PricingServiceTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/Tests/ClaudeUsageKitTests/SessionReaderTests.swift"
         }
       ],
-      "outputFilePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources"
+      "outputFilePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/ClaudeUsageKitTests.build/sources"
     },
-    "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+    "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
       "alwaysOutOfDate" : true,
       "inputs" : [
         {
@@ -803,7 +879,7 @@
           "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
         }
       ],
-      "outputFilePath" : "/Users/marc-antoine.ferland/dev/ClaudeUsageKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+      "outputFilePath" : "/Users/marc-antoine.ferland/dev/claude-usage-kit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
     }
   }
 }
