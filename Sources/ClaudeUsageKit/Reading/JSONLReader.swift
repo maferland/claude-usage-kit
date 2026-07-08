@@ -81,6 +81,8 @@ public enum JSONLReader {
         return files
     }
 
+    private static let assistantMarker = Data("assistant".utf8)
+
     // MARK: - Line parsing
 
     /// Parse a single JSONL file and call the handler for each assistant entry with usage data.
@@ -93,14 +95,12 @@ public enum JSONLReader {
         defer { handle.closeFile() }
 
         let data = handle.readDataToEndOfFile()
-        guard let content = String(data: data, encoding: .utf8) else { return }
 
-        for line in content.components(separatedBy: .newlines) {
-            let trimmed = line.trimmingCharacters(in: .whitespaces)
-            guard !trimmed.isEmpty,
-                  let lineData = trimmed.data(using: .utf8) else { continue }
-
-            guard let entry = try? decoder.decode(Entry.self, from: lineData) else { continue }
+        for line in data.split(separator: 0x0A, omittingEmptySubsequences: true) {
+            // Every usage-bearing line is an assistant message. A byte-level marker scan
+            // skips the ~80% of lines that aren't, before paying for a full JSON decode.
+            guard line.range(of: assistantMarker) != nil,
+                  let entry = try? decoder.decode(Entry.self, from: Data(line)) else { continue }
 
             guard entry.type == "assistant",
                   let msg = entry.message,
